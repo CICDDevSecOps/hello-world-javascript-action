@@ -21,7 +21,8 @@
   "homepage": "https://github.com/CICDDevSecOps/hello-world-javascript-action#readme",
   "dependencies": {
     "@actions/core": "^1.10.1",
-    "@actions/github": "^6.0.0"
+    "@actions/github": "^6.0.0",
+    "js-yaml": "^4.1.0"
   },
   "devDependencies": {
     "@vercel/ncc": "latest"
