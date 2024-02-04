@@ -12,9 +12,6 @@ jobs:
       - name : Github Script 
         uses: actions/github-script@v7
         id: my-script
-        env:
-          who-to-greet : "data"
-          veracode-data: "sample"
         with:
           script: |
             const script = require('./dist/index')

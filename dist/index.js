@@ -9,9 +9,9 @@ const github = __nccwpck_require__(5438);
 module.exports = async ({github, context, core}) => {
 try {
   // `who-to-greet` input defined in action metadata file
-  const nameToGreet = core.getInput('who-to-greet');
-  const veracode = core.getInput('veracode-data');
-  core.setOutput("veracode", veracode);
+  //const nameToGreet = core.getInput('who-to-greet');
+  //const veracode = core.getInput('veracode-data');
+  core.setOutput("veracode", sampleapp);
 } catch (error) {
   core.setFailed(error.message);
 }
