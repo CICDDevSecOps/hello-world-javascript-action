@@ -7,12 +7,15 @@
 const core = __nccwpck_require__(2186);
 const github = __nccwpck_require__(5438);
 const js = __nccwpck_require__(1917);
+const fs = __nccwpck_require__ (7147);
 module.exports = async ({github, context, core}) => {
 try {
   // `who-to-greet` input defined in action metadata file
   //const nameToGreet = core.getInput('who-to-greet');
   //const veracode = core.getInput('veracode-data');
-  core.setOutput("veracode", "sampleapp");
+  const yamlData = fs.readFilesync(`${github.workspace}/app-sec.yml`,utf8);
+  const parsedData = yaml.load(yamlData);
+  core.setOutput("veracode", parsedData.veracode);
 } catch (error) {
   core.setFailed(error.message);
 }
