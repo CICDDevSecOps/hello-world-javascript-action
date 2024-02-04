@@ -12,9 +12,10 @@ jobs:
       - name : Github Script 
         uses: actions/github-script@v7
         id: my-script
-        with:
-          who-to-greet: "test"
+        env:
+          who-to-greet : "data"
           veracode-data: "sample"
+        with:
           script: |
             const script = require('./dist/index')
             await script({github, context, core})
