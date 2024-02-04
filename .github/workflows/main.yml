@@ -14,6 +14,9 @@ jobs:
         id: hello
         with:
           who-to-greet: 'Mona the Octocat'
+          veracode-data: 'sample-app'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: Get the output time
+        run: echo "The veracode data ${{ steps.hello.outputs.veracode }}"
