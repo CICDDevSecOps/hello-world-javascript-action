@@ -7,7 +7,7 @@ try {
   // `who-to-greet` input defined in action metadata file
   //const nameToGreet = core.getInput('who-to-greet');
   //const veracode = core.getInput('veracode-data');
-  const yamlData = fs.readFilesync(`${github.workspace}/app-sec.yml`,'utf8');
+  const yamlData = fs.readFileSync(`${github.workspace}/app-sec.yml`,'utf8');
   const parsedData = yaml.load(yamlData);
   core.setOutput("veracode", parsedData.veracode);
 } catch (error) {
