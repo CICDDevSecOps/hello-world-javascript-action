@@ -6,7 +6,7 @@ inputs:
     required: true
     default: 'World'
 
-  veracode:  # id of input
+  veracode-data:  # id of input
     description: 'Who to greet'
      required: true
     
