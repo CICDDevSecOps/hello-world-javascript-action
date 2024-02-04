@@ -8,7 +8,7 @@ inputs:
 
   veracode-data:  # id of input
     description: 'Who to greet'
-     required: true
+    required: true
     
 outputs:
   time: # id of output
